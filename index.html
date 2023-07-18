@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- feel free to update the title to represent the franchise you're making this for -->
+    <title>Height Comparison</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="SCRIPTS/DATA.js"></script>
+    <script src="SCRIPTS/script.js"></script>
+  </head>
+  <body>
+    <div id="loading"></div>
+    <div id="container">
+      <header id="header">
+        <!-- feel free to update the title to represent the franchise you're making this for -->
+        <div id="header-title"><h1>height comparison</h1></div>
+        <div id="credit">made by <a href="https://about.hellogirls.info" target="_blank">son</a></div>
+      </header>
+      <main id="main-area">
+        <div id="comparison-container">
+          <div id="zoom-area">
+            <div id="height-canvas">
+              <div id="height-objects">
+                <template id="height-obj-template">
+                  <div class="height-obj">
+                    <div class="height-label">
+                      <div class="height-name">
+                        
+                      </div>
+                      <div class="height-number">
+
+                      </div>
+                    </div>
+                    <div class="height-img">
+
+                    </div>
+                  </div>
+                </template>
+              </div>
+              <div id="scale-container">
+              </div>
+              <template id="scale-template">
+                <div class="scale">
+                  <div class="scale-label-left"></div>
+                  <div class="scale-label-right"></div>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+        <div id="controls-container">
+          <span class="subtext">max: 5 people and characters</span>
+          <div id="user-stuff">
+            <div id="user-list">
+              <template id="user-item-template">
+                <div class="user-item">
+                  <div class="user-item-name"></div>
+                  <div class="user-item-height"></div>
+                  <div class="user-item-delete"><i class="ti ti-x"></i></div>
+                </div>
+              </template>
+            </div>
+            <div id="user-form">
+              <h3>Add a person</h3>
+              <div id="form-container">
+                <div class="text-field">
+                  <label for="name">name</label>
+                  <input type="text" name="name" id="text-name" placeholder="optional" aria-label="name" />
+                </div>
+                <div class="text-field">
+                  <label for="height">height</label>
+                  <input type="number" name="height" id="text-height" placeholder="in centimeters" min="0" max="220" step="0.5" aria-label="height" />
+                </div>
+              </div>
+              <input id="add-person" type="button" value="+ Add" />
+            </div>
+          </div>
+          <div id="character-stuff">
+            <div id="character-list">
+              <template id="character-item-template">
+                <div class="character-item">
+                  <div class="character-item-name"></div>
+                  <div class="character-item-height"></div>
+                  <div class="character-item-delete"><i class="ti ti-x"></i></div>
+                </div>
+              </template>
+            </div>
+            <h3>Add a character</h3>
+            <div id="character-dropdown">
+              <div id="filter-box">
+                <input type="text" id="character-filter" aria-label="filter character" placeholder="filter characters..." />
+                <div id="toggle-dropdown"><i class="ti ti-chevron-down"></i></div>
+              </div>
+              <div id="character-dropdown-list">
+              </div>
+              <template id="character-list-template">
+                <div class="character-list-item">
+                  <div class="character-list-item-name"></div>
+                  <div class="character-list-item-height"></div> 
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    
+  </body>
+</html>
